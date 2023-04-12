@@ -27,13 +27,13 @@ function onImageContainerClick(evt) {
         return;
     }
     evt.preventDefault();
-    const lightbox = new SimpleLightbox('.gallery a', {
-        captions: true,
-        captionsData: 'alt',
-        captionDelay: 250,
-      });
-      lightbox.open();
 }
+const lightbox = new SimpleLightbox('.gallery a', {
+    captions: true,
+    captionsData: 'alt',
+    captionDelay: 250,
+  });
+  lightbox.open();
  
 console.log(galleryItems);
 
