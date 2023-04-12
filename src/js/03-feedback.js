@@ -10,11 +10,11 @@ if (savedState) {
 }
 
 const saveFormState = _.throttle(() => {
-  const currentState = {
-    email: emailInput.value,
-    message: messageInput.value,
-  };
-  localStorage.setItem('feedback-form-state', JSON.stringify(currentState));
+  formData = {
+    email: emailInput.value.trim(),
+    message: messageInput.value  
+  }
+    localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 }, 500);
 
 emailInput.addEventListener('input', saveFormState);
@@ -26,9 +26,11 @@ form.addEventListener('submit', (event) => {
   emailInput.value = '';
   messageInput.value = '';
 
-    const formData = {
+  const formData = {
     email: emailInput.value,
     message: messageInput.value,
   };
   console.log(formData);
 });
+
+
