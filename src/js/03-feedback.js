@@ -9,7 +9,7 @@ if (savedState) {
   messageInput.value = savedState.message;
 }
 
-const saveFormState = _.throttle(() => {
+const saveFormState = throttle(() => {
   formData = {
     email: emailInput.value.trim(),
     message: messageInput.value  
